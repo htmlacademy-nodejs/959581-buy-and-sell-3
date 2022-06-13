@@ -55,6 +55,8 @@ const PictureRestrict = {
   MAX: 16,
 };
 
+const getPictureFileName = (number) => number > 10 ? `item${number}.jpg` : `item0${number}.jpg`;
+
 const generateOffers = (count) => {
   return Array.from({length: count}, () => ({
     category: [CATEGORIES[getRandomInt(0, CATEGORIES.length - 1)]],
