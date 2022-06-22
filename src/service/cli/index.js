@@ -6,8 +6,8 @@ const version = require('./version');
 
 const Cli = {
   [generate.name]: generate,
-  [help.name]: help.name,
-  [version.name]: version.name
+  [help.name]: help,
+  [version.name]: version
 };
 
 module.exports = {
