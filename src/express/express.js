@@ -12,6 +12,7 @@ const mainRoutes = require('./routes/main-routes');
 
 
 const PUBLIC_DIR = `public`;
+const UPLOAD_DIR = `upload`;
 // зафиксируем порт
 const DEFAULT_PORT = 8080;
 
@@ -25,5 +26,6 @@ app.use('/', mainRoutes);
 app.listen(DEFAULT_PORT);
 
 app.use(express.static(path.resolve(__dirname, PUBLIC_DIR)));
+app.use(express.static(path.resolve(__dirname, UPLOAD_DIR)));
 app.set(`views`, path.resolve(__dirname, `templates`));
 app.set(`view engine`, `pug`);
